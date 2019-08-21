@@ -12,7 +12,7 @@ class Extractor:
 
     @classmethod
     def php_variable_assignments(cls, line) -> tuple:
-        """ Reads line and return PHP variable assignments and a tuple (key, value)
+        """ Reads line and return PHP variable assignments as a tuple (key, value)
         :param line: string, intended to be a line from a php file
         :return: tuple with key value pairs from variable assignments in line
         """
