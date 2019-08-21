@@ -70,7 +70,7 @@ if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
 
 @pytest.mark.parametrize("line, expected_result", php_define_strings)
 def test_db_config_parse_php_key_value_pairs(line, expected_result):
-    result = Extractor.php_variable_assignment(line)
+    result = Extractor.php_variable_assignments(line)
     if result:
         key, value = expected_result
         assert key == result[0]
