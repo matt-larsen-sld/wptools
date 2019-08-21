@@ -6,7 +6,7 @@ BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 WP_CONFIG_FILE = "wp-config.php"
 
 wp_config_file = os.path.join(BASE_PATH, WP_CONFIG_FILE)
-with open(wp_config_file, 'r') as handle:
+with open(wp_config_file, "r") as handle:
     variables = Extractor.extract(handle)
 db_config_values = {
     "DB_NAME": dict.get(variables, "DB_NAME"),
@@ -15,4 +15,3 @@ db_config_values = {
     "DB_PASSWORD": dict.get(variables, "DB_PASSWORD"),
 }
 print(db_config_values)
-
