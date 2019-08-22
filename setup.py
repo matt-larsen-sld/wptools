@@ -8,10 +8,10 @@ setuptools.setup(
     version="0.0.1",
     author="Matthew Larsen",
     author_email="matt.larsen@connorgp.com",
-    description="A small package of tools for administration of WordPress installations",
+    description="A small set of tools for administration of WordPress installations",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/utegrad/",
+    url="https://github.com/matt-larsen-sld/wptools",
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
