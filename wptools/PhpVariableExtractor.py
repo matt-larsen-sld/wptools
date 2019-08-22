@@ -1,10 +1,11 @@
-""" Given a file handle find the PHP variable assignments  """
+""" Given a PHP file, find the PHP variable assignments  """
 import re
 
 
 class Extractor:
     """ Methods for extracting variables from PHP files
     """
+
     # Breaks a PHP 'define("KEY", "VALUE");' statement into 4 match groups where group 2 is KEY and group 4 is VALUE
     define_pattern = re.compile(r"""\bdefine\(\s*('|")(.*)\1\s*,\s*('|")(.*)\3\)\s*;""")
     # Breaks a PHP '$KEY = "VALUE";' statement into 4 match groups where group 2 is KEY and group 4 is VALUE
@@ -44,7 +45,7 @@ class Extractor:
                     pass
 
         if isinstance(php_file, str):
-            with open(php_file, 'r') as f:
+            with open(php_file, "r") as f:
                 extract_variables(f)
         else:
             extract_variables(php_file)
