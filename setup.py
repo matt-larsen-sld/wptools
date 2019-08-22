@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="wordpresstools",
-    version="0.0.1",
+    version="0.0.2",
     author="Matthew Larsen",
     author_email="matt.larsen@connorgp.com",
     description="A small set of tools for administration of WordPress installations",
