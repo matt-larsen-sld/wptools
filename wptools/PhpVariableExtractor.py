@@ -3,6 +3,8 @@ import re
 
 
 class Extractor:
+    """ Methods for extracting variables from PHP files
+    """
     # Breaks a PHP 'define("KEY", "VALUE");' statement into 4 match groups where group 2 is KEY and group 4 is VALUE
     define_pattern = re.compile(r"""\bdefine\(\s*('|")(.*)\1\s*,\s*('|")(.*)\3\)\s*;""")
     # Breaks a PHP '$KEY = "VALUE";' statement into 4 match groups where group 2 is KEY and group 4 is VALUE

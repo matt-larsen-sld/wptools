@@ -1,5 +1,9 @@
 # Python WordPress Tool
+    A collection of tools for managing WordPress installations
 
-## PhpVariableExtrator
-  Class to extract variable from PHP file as key value pairs.
+## PhpVariableExtractor
+
+### Extractor
+    Class to extract variables from a PHP file as key value pairs in a Python dict.
+  
   
