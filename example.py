@@ -1,6 +1,6 @@
 import os
 
-from wptools.WordPressConfigExtractor import Extractor
+from wptools.PhpVariableExtractor import Extractor
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 WP_CONFIG_FILE = "wp-config.php"

@@ -1,7 +1,7 @@
 import io
 import pytest
 
-from wptools.WordPressConfigExtractor import Extractor
+from wptools.PhpVariableExtractor import Extractor
 
 php_define_strings = [
     ("define('DB_NAME', 'wordpress_db');", ("DB_NAME", "wordpress_db")),
