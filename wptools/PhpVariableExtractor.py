@@ -24,17 +24,26 @@ class Extractor:
             return assign_match.group(2), assign_match.group(4)
 
     @classmethod
-    def extract(cls, open_file) -> dict:
-        """ Extract a dictionary of PHP variable assignments from a given file handle
-        :param open_file: File handle to read from
+    def extract(cls, php_file) -> dict:
+        """ Extract a dictionary of PHP variable assignments from a given file
+        :param php_file: File to read from
         :return: dict with the variable assignments from the given open_file
         """
         result = {}
-        for line in open_file:
-            try:
-                k, v = cls.php_variable_assignments(line)
-                result[k] = v
-            except TypeError:
-                # Get a TypeError when trying to unpack cls.php_variable_assignments to a tuple when no match was found.
-                pass
+
+        def extract_variables(open_file):
+            for line in open_file:
+                try:
+                    k, v = cls.php_variable_assignments(line)
+                    result[k] = v
+                except TypeError:
+                    # Get a TypeError when trying to unpack cls.php_variable_assignments to a tuple when no match was
+                    # found.
+                    pass
+
+        if isinstance(php_file, str):
+            with open(php_file, 'r') as f:
+                extract_variables(f)
+        else:
+            extract_variables(php_file)
         return result
