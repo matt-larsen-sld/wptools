@@ -5,8 +5,9 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+bump2version = "*"
 
 [packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
